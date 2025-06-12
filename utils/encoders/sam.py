@@ -24,7 +24,6 @@ class SAMPolicy(PolicyNetwork):
         return hook
         
     def _load_encoder(self):
-        # sam = sam_model_registry['vit_b'](checkpoint='/shares/bcs516/ryan/encoders/sam_vit_b_01ec64.pth')
         sam = sam_model_registry['vit_b'](checkpoint='/home/ubuntu/encoders/sam_vit_b_01ec64.pth')
         return sam.image_encoder, 50176 #9216 #50176 # 9216
     

@@ -45,13 +45,20 @@ This script will run the policy forward.
 
 ## Training IQL
 
-We can run IQL with the following script.
+We can run IQL with the following script. The script was adapted from [CORL](https://github.com/tinkoff-ai/CORL) which provides single file implementations of offline algorithms. 
 
 ```
 # python -m run_metaworld_iql --base_encoder sam --iql_seed 42 --env_name push-v2 --traj_len 100 --num_traj 2000 --train_steps 10000
 ```
 
+## Reconstruction
 
+We can train a reconstructor by the following, which will produce embeddings and reconstructions for a given trajectory and encoder.
 
+```
+python -m train_recon --embedding_name sam --env_name assembly
+```
 
+## Note on Gymnasium Environments
 
+The environments were trained with HER, and uses a different data collection mechanism. The code is
