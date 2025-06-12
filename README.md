@@ -61,4 +61,4 @@ python -m train_recon --embedding_name sam --env_name assembly
 
 ## Note on Gymnasium Environments
 
-The environments were trained with HER, and uses a different data collection mechanism. The code is
+The environments were trained with HER, and uses a different data collection mechanism. The code is currently being prepared.
