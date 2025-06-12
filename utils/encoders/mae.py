@@ -26,7 +26,6 @@ class MAEPolicy(PolicyNetwork):
     def _load_encoder(self):
         # load base model
         model = vit_models.vit_base_patch16()
-        # checkpoint = torch.load('/shares/bcs516/ryan/encoders/mae_pretrain_vit_base.pth', map_location='cuda')
         checkpoint = torch.load('/home/ubuntu/encoders/mae_pretrain_vit_base.pth', map_location='cuda')
         # weights are under "model" key
         checkpoint_model = checkpoint['model']

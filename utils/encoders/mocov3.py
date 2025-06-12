@@ -22,7 +22,6 @@ class MoCoV3Policy(PolicyNetwork):
     
     def _load_encoder(self):
         model = tv_models.__dict__['resnet50']()
-        # checkpoint = torch.load('/shares/bcs516/ryan/encoders/r-50-1000ep.pth', map_location=self.device)
         checkpoint = torch.load('/home/ubuntu/encoders/r-50-1000ep.pth', map_location=self.device)
         state_dict = checkpoint['state_dict']
         for k in list(state_dict.keys()):

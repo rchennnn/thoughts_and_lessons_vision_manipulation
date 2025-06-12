@@ -21,7 +21,6 @@ class CLIPPolicy(PolicyNetwork):
         self.base_encoder_name = 'clip'
     
     def _load_encoder(self):
-        # model, _, _ = open_clip.create_model_and_transforms('ViT-B-16', pretrained='/shares/bcs516/ryan/encoders/clip_vit_b.pth', device='cuda')
         model, _, _ = open_clip.create_model_and_transforms('ViT-B-16', pretrained='/home/ubuntu/encoders/clip_vit_b.pth', device='cuda')
         model.eval()
         # remember to self.preprocess batch images with clip

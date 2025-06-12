@@ -27,7 +27,6 @@ class IBOTPolicy(PolicyNetwork):
     
     def _load_encoder(self):
         # load base model
-        # state_dict = torch.load('/shares/bcs516/ryan/encoders/ibot.pth', map_location='cuda')['state_dict']
         state_dict = torch.load('/home/ubuntu/encoders/ibot.pth', map_location='cuda')['state_dict']
         state_dict = {k.replace("module.", ""): v for k, v in state_dict.items()}
         model = vit_models.vit_base_patch16().cuda()

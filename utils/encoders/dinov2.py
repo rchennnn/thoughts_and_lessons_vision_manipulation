@@ -23,7 +23,6 @@ class DinoV2Policy(PolicyNetwork):
     
     def _load_encoder(self):
         model : nn.Module = torch.hub.load('facebookresearch/dinov2', 'dinov2_vitb14_reg', pretrained=False).to('cuda')
-        # model.load_state_dict(torch.load('/shares/bcs516/ryan/encoders/dinov2_vitb14_reg4_pretrain.pth'))
         model.load_state_dict(torch.load('/home/ubuntu/encoders/dinov2_vitb14_reg4_pretrain.pth'))
         model.eval()
         return model, 768 # 1024
