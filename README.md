@@ -63,7 +63,13 @@ python -m train_recon --embedding_name sam --env_name assembly
 
 VIP does not require the user to explicitly download weights, but the model is loaded in the codebase. The `example` directory contains scripts to gather embeddings from VIP, and train BC and IQL, which can then be repeated with multiple encoders and multiple environments.
 
-Once the embeddings are trained, the reconstruction step can be used to reconstruct scenes to compute downstream edge loss and pixelwise loss metrics. 
+- `example/make_vip_embeddings.sh` - loads VIP and creates embeddings of scenes from a given environment specified in the arguments. In this example, `button-press` is the selected environment.
+
+- `example/run_vip_buttonpress_bc.sh` - Runs BC on the collected embeddings and plays the trained policy and logs the success rate.
+
+- `example/run_vip_buttonpress_bc.sh` - Runs IQL on the collected embeddings and plays the trained policy and logs the success rate.
+
+Once the embeddings are trained, the reconstruction script detailed above can be used to reconstruct scenes to compute downstream edge loss and pixelwise loss metrics. 
 
 ## Note on Gymnasium Environments
 
