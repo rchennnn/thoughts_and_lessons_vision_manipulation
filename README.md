@@ -59,6 +59,12 @@ We can train a reconstructor by the following, which will produce embeddings and
 python -m train_recon --embedding_name sam --env_name assembly
 ```
 
+# Example Run with VIP Encoder
+
+VIP does not require the user to explicitly download weights, but the model is loaded in the codebase. The `example` directory contains scripts to gather embeddings from VIP, and train BC and IQL, which can then be repeated with multiple encoders and multiple environments.
+
+Once the embeddings are trained, the reconstruction step can be used to reconstruct scenes to compute downstream edge loss and pixelwise loss metrics. 
+
 ## Note on Gymnasium Environments
 
 The environments were trained with HER, and uses a different data collection mechanism. The code is currently being prepared.

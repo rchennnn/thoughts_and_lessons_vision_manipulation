@@ -13,4 +13,4 @@ python -m run_metaworld_iql \
      --traj_len 100 \
      --num_traj 2000 \
      --train_steps 10000 \
-     --pos_embed 1
+     --pos_embed 0
